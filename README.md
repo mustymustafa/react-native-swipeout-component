@@ -220,5 +220,3 @@ const styles = StyleSheet.create({
 export default MyComponent;
 
 ```
-
-This example illustrates how to pass a custom component to a button and configure the swipe background colors. It also emphasizes the importance of the `buttonWidth` prop and the restriction against using `autoOpenRight` and `autoOpenLeft` together.
