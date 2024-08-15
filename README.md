@@ -7,7 +7,7 @@
 
 ```bash
 
-npm install swipeout-component
+npm install react-native-swipeout-component
 
 ```
 
@@ -19,7 +19,7 @@ import React from 'react';
 
 import { View, Text, StyleSheet } from 'react-native';
 
-import Swipeout from 'swipeout-component';
+import Swipeout from 'react-native-swipeout-component';
 
 const MyComponent = () => {
 
@@ -90,50 +90,28 @@ export default MyComponent;
 ```
 
 ### Props
-
-| Prop                  | Type          | Default   | Description                                                                                                                                              |
-
-|-----------------------|---------------|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-
-| `autoClose`           | `boolean`     | `false`   | Automatically closes the swipe action after a button is pressed.                                                                                         |
-
-| `buttonBackgroundColor` | `string`     |           | Background color for the individual swipe buttons.                                                                                                       |
-
-| `leftBackgroundColor` | `string`      |           | Background color when swiping to the left.                                                                                                               |
-
-| `rightBackgroundColor` | `string`     |           | Background color when swiping to the right.                                                                                                              |
-
-| `close`               | `boolean`     |           | Programmatically close the swipeout.                                                                                                                     |
-
-| `left`                | `array`       | `[]`      | Array of buttons to show on the left swipe action. Each button can have properties like `text`, `onPress`, `type`, `component`, and `buttonBackgroundColor`. |
-
-| `right`               | `array`       | `[]`      | Array of buttons to show on the right swipe action.                                                                                                      |
-
-| `onOpen`              | `function`    |           | Callback function called when the swipe action is opened.                                                                                                |
-
-| `onClose`             | `function`    |           | Callback function called when the swipe action is closed.                                                                                                |
-
-| `scroll`              | `function`    |           | Callback function to handle scroll events.                                                                                                               |
-
-| `style`               | `object`      |           | Custom styles for the swipeout container.                                                                                                                |
-
-| `sensitivity`         | `number`      | `50`      | Sensitivity of the swipe gesture.                                                                                                                        |
-
-| `buttonWidth`         | `number`      |           | Width of the swipe buttons. **Must be provided if `autoOpenRight` or `autoOpenLeft` is used.**                                                           |
-
-| `disabled`            | `boolean`     | `false`   | Disable the swipe actions.                                                                                                                               |
-
-| `autoOpenRight`       | `boolean`     | `false`   | Automatically opens the right swipe action when the component is mounted. **Do not use with `autoOpenLeft`.**                                            |
-
-| `autoOpenLeft`        | `boolean`     | `false`   | Automatically opens the left swipe action when the component is mounted. **Do not use with `autoOpenRight`.**                                            |
-
-| `timeout`             | `number`      |           | Time in milliseconds to keep the swipe action open when `autoOpenRight` or `autoOpenLeft` is used.                                                       |
-
-| `children`            | `ReactNode`   |           | The content to render inside the swipeout container.                                                                                                     |
-
-| `dragToCTA`           | `boolean`     | `false`   | Enable drag to call-to-action functionality.                                                                                                             |
-
-| `onCTA`               | `function`    |           | Callback function to handle the call-to-action event when `dragToCTA` is enabled.                                                                        |
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `autoClose` | `boolean` | `false` | Automatically closes the swipe action after a button is pressed. |
+| `buttonBackgroundColor` | `string` |  | Background color for the individual swipe buttons. |
+| `leftBackgroundColor` | `string` |  | Background color when swiping to the left. |
+| `rightBackgroundColor` | `string` |  | Background color when swiping to the right. |
+| `close` | `boolean` |  | Programmatically close the swipeout. |
+| `left` | `array` | `[]` | Array of buttons to show on the left swipe action. Each button can have properties like `text`, `onPress`, `type`, `component`, and `buttonBackgroundColor`. |
+| `right` | `array` | `[]` | Array of buttons to show on the right swipe action. |
+| `onOpen` | `function` |  | Callback function called when the swipe action is opened. |
+| `onClose` | `function` |  | Callback function called when the swipe action is closed. |
+| `scroll` | `function` |  | Callback function to handle scroll events. |
+| `style` | `object` |  | Custom styles for the swipeout container. |
+| `sensitivity` | `number` | `50` | Sensitivity of the swipe gesture. |
+| `buttonWidth` | `number` |  | Width of the swipe buttons. **Must be provided if `autoOpenRight` or `autoOpenLeft` is used.** |
+| `disabled` | `boolean` | `false` | Disable the swipe actions. |
+| `autoOpenRight` | `boolean` | `false` | Automatically opens the right swipe action when the component is mounted. **Do not use with `autoOpenLeft`.** |
+| `autoOpenLeft` | `boolean` | `false` | Automatically opens the left swipe action when the component is mounted. **Do not use with `autoOpenRight`.** |
+| `timeout` | `number` |  | Time in milliseconds to keep the swipe action open when `autoOpenRight`or `autoOpenLeft` is used. |
+| `children` | `ReactNode` |  | The content to render inside the swipeout container. |
+| `dragToCTA` | `boolean` | `false` | Enable drag to call-to-action functionality. |
+| `onCTA` | `function` |  | Callback function to handle the call-to-action event when `dragToCTA` is enabled. |                                                                 |
 
 ### Important Rules
 
@@ -149,7 +127,7 @@ import React from 'react';
 
 import { View, Text, StyleSheet } from 'react-native';
 
-import Swipeout from 'swipeout-component';
+import Swipeout from 'react-native-swipeout-component';
 
 const CustomButtonContent = () => (
 
