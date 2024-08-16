@@ -113,6 +113,121 @@ export default MyComponent;
 | `dragToCTA` | `boolean` | `false` | Enable drag to call-to-action functionality. |
 | `onCTA` | `function` |  | Callback function to handle the call-to-action event when `dragToCTA` is enabled. |                                                                 |
 
+### Integration with FlatList
+
+Here's how you can integrate `react-native-swipeout-component` with a `FlatList` to prevent scrolling while swiping:
+
+### Step-by-Step Example:
+
+
+
+ **Implement the FlatList with Swipeout:**
+
+   Here's how you can manage the scrolling behavior when swiping on items:
+
+   ```jsx
+
+   import React, { useState } from 'react';
+
+   import { FlatList, Text, View } from 'react-native';
+
+   import Swipeout from 'react-native-swipeout';
+
+   const YourComponent = () => {
+
+     const [scrollEnabled, setScrollEnabled] = useState(true);
+
+     const yourData = [
+
+       { key: 'Item 1' },
+
+       { key: 'Item 2' },
+
+       { key: 'Item 3' },
+
+       // Add more items as needed
+
+     ];
+
+     const renderItem = ({ item }) => {
+
+       const swipeoutBtns = [
+
+         {
+
+           text: 'Delete',
+
+           onPress: () => console.log('Delete pressed'),
+
+         },
+
+         // Add more buttons as needed
+
+       ];
+
+       return (
+
+         <Swipeout
+
+           right={swipeoutBtns}
+
+           autoClose={true}
+
+           backgroundColor="transparent"
+
+           onOpen={() => setScrollEnabled(false)}   // Disable scrolling when swipeout is open
+
+           onClose={() => setScrollEnabled(true)}   // Re-enable scrolling when swipeout is closed
+
+         >
+
+           <View style={{ padding: 20, backgroundColor: 'white' }}>
+
+             <Text>{item.key}</Text>
+
+           </View>
+
+         </Swipeout>
+
+       );
+
+     };
+
+     return (
+
+       <FlatList
+
+         data={yourData}
+
+         renderItem={renderItem}
+
+         scrollEnabled={scrollEnabled}   // Control scroll based on swipe state
+
+         keyExtractor={(item) => item.key}
+
+       />
+
+     );
+
+   };
+
+   export default YourComponent;
+
+   ```
+
+### Explanation:
+
+- **`scrollEnabled` State**: We use a `scrollEnabled` state variable to toggle the scrolling of the `FlatList`.
+
+- **`Swipeout` Component**: This component wraps around the list item and provides swipeable buttons.
+
+- **`onOpen` and `onClose` Callbacks**: These callbacks are triggered when the swipeout is opened or closed, respectively. They are used to disable the `FlatList`'s scrolling when a swipe action is in progress and re-enable it afterward.
+
+### Notes:
+
+- **Performance**: Disabling and enabling scrolling dynamically is usually efficient, but be cautious if you have a very large list or complex items, as it might cause slight jankiness.
+
+
 ### Important Rules
 
 1\. **Auto Open Restrictions**: You should not use `autoOpenRight` and `autoOpenLeft` together. Only one of these properties should be set to `true` to avoid conflicting behaviors.
