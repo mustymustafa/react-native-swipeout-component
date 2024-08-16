@@ -3,14 +3,19 @@
 
 `React Native Swipeout` is a customizable swipeable row component for React Native, allowing you to create swipe actions like deleting, archiving, or other actions you might want to trigger with a swipe.
 
-![swipeout](https://github.com/user-attachments/assets/b2b3e3b0-3305-43a8-9067-04f304894111)
+
 
 #### Installation
-
 
 ```bash
 
 npm install react-native-swipeout-component
+
+```
+or 
+```bash
+
+yarn add react-native-swipeout-component
 
 ```
 
@@ -97,8 +102,8 @@ export default MyComponent;
 | --- | --- | --- | --- |
 | `autoClose` | `boolean` | `false` | Automatically closes the swipe action after a button is pressed. |
 | `buttonBackgroundColor` | `string` |  | Background color for the individual swipe buttons. |
-| `leftBackgroundColor` | `string` |  | Background color when swiping to the left. |
-| `rightBackgroundColor` | `string` |  | Background color when swiping to the right. |
+| `leftBackgroundColor` | `string` |  | Background color when swiping to the left.  **Should be used when you have one button** |
+| `rightBackgroundColor` | `string` |  | Background color when swiping to the right. **Should be used when you have one button** |
 | `close` | `boolean` |  | Programmatically close the swipeout. |
 | `left` | `array` | `[]` | Array of buttons to show on the left swipe action. Each button can have properties like `text`, `onPress`, `type`, `component`, and `buttonBackgroundColor`. |
 | `right` | `array` | `[]` | Array of buttons to show on the right swipe action. |
@@ -115,14 +120,6 @@ export default MyComponent;
 | `children` | `ReactNode` |  | The content to render inside the swipeout container. |
 | `dragToCTA` | `boolean` | `false` | Enable drag to call-to-action functionality. |
 | `onCTA` | `function` |  | Callback function to handle the call-to-action event when `dragToCTA` is enabled. |                                                                 |
-
-
-### Drag to CTA
-
-
-https://github.com/user-attachments/assets/fce79d67-15c3-4b29-9f1e-725f7cb1f208
-
-
 
 ### Integration with FlatList
 
