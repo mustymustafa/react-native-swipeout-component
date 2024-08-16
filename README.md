@@ -117,15 +117,8 @@ export default MyComponent;
 
 Here's how you can integrate `react-native-swipeout-component` with a `FlatList` to prevent scrolling while swiping:
 
-### Step-by-Step Example:
 
-
-
- **Implement the FlatList with Swipeout:**
-
-   Here's how you can manage the scrolling behavior when swiping on items:
-
-   ```javascript
+```javascript
 
    import React, { useState } from 'react';
 
@@ -212,8 +205,7 @@ Here's how you can integrate `react-native-swipeout-component` with a `FlatList`
    };
 
    export default YourComponent;
-
-   ```
+```
 
 ### Explanation:
 
