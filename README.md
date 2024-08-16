@@ -7,17 +7,25 @@
 
 #### Installation
 
-```bash
 
-npm install react-native-swipeout-component
-
-```
-or 
 ```bash
 
 yarn add react-native-swipeout-component
 
 ```
+or 
+
+```bash
+
+npm i react-native-swipeout-component
+
+```
+**Note: If you face dependency issues while using npm installation then run this:**
+```bash
+
+npm i react-native-swipeout-component --legacy-peer-deps
+
+
 
 #### Usage
 
