@@ -1,20 +1,19 @@
 {
   "name": "react-native-swipeout-component",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "author": "Mustafa <mustafaumar70@live.com>",
   "license": "MIT",
   "homepage": "https://github.com/mustymustafa/React-Native-Swipeout.git",
-  "repository": {
-    "url": "https://github.com/mustymustafa/React-Native-Swipeout.git"
-  },
+  "repository": {"url": "https://github.com/mustymustafa/React-Native-Swipeout.git"},
   "dependencies": {
     "lodash": "^4.17.21",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-native": "^0.75.1"
   },
+
   "scripts": {
     "build": "tsup"
   },
@@ -25,7 +24,6 @@
     "swiping"
   ],
   "devDependencies": {
-    "@changesets/cli": "^2.27.7",
     "@types/lodash": "^4.17.7",
     "@types/prop-types": "^15.7.12",
     "@types/react": "^18.3.3",
