@@ -1,1 +1,1 @@
-export { default as Swipeout } from './SwipeoutComponent'
+export * from './SwipeoutComponent'
