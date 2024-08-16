@@ -3,7 +3,10 @@
 
 `React Native Swipeout` is a customizable swipeable row component for React Native, allowing you to create swipe actions like deleting, archiving, or other actions you might want to trigger with a swipe.
 
+![swipeout](https://github.com/user-attachments/assets/b2b3e3b0-3305-43a8-9067-04f304894111)
+
 #### Installation
+
 
 ```bash
 
@@ -112,6 +115,14 @@ export default MyComponent;
 | `children` | `ReactNode` |  | The content to render inside the swipeout container. |
 | `dragToCTA` | `boolean` | `false` | Enable drag to call-to-action functionality. |
 | `onCTA` | `function` |  | Callback function to handle the call-to-action event when `dragToCTA` is enabled. |                                                                 |
+
+
+### Drag to CTA
+
+
+https://github.com/user-attachments/assets/fce79d67-15c3-4b29-9f1e-725f7cb1f208
+
+
 
 ### Integration with FlatList
 
