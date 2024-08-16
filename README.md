@@ -21,11 +21,12 @@ npm i react-native-swipeout-component
 
 ```
 **Note: If you face dependency issues while using npm installation then run this:**
+
 ```bash
 
 npm i react-native-swipeout-component --legacy-peer-deps
 
-
+```
 
 #### Usage
 
