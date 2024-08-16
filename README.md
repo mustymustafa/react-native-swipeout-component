@@ -125,7 +125,7 @@ Here's how you can integrate `react-native-swipeout-component` with a `FlatList`
 
    Here's how you can manage the scrolling behavior when swiping on items:
 
-   ```jsx
+   ```javascript
 
    import React, { useState } from 'react';
 
