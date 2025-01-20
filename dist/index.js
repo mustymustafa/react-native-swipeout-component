@@ -1,4 +1,3 @@
-"use strict";
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -446,15 +445,23 @@ var Swipeout = class extends import_react2.Component {
     styleLeft.push(styleLeftPos.left);
     const isRightVisible = posX < 0;
     const isLeftVisible = posX > 0;
-    return /* @__PURE__ */ import_react2.default.createElement(import_react_native2.View, { style: styleSwipeout }, /* @__PURE__ */ import_react2.default.createElement(
+    return /* @__PURE__ */ import_react2.default.createElement(
       import_react_native2.View,
-      __spreadValues({
-        ref: (node) => this.swipeoutContent = node,
-        style: [styleContent],
-        onLayout: this._onLayout
-      }, this._panResponder.panHandlers),
-      children
-    ), this._renderButtons(right, isRightVisible, styleRight), this._renderButtons(left, isLeftVisible, styleLeft));
+      { style: styleSwipeout },
+      /* @__PURE__ */ import_react2.default.createElement(
+        import_react_native2.View,
+        __spreadValues({
+          ref: (node) => this.swipeoutContent = node,
+          style: [styleContent],
+          onLayout: this._onLayout
+        }, this._panResponder.panHandlers),
+        children
+      ),
+      //@ts-ignore
+      this._renderButtons(right, isRightVisible, styleRight),
+      //@ts-ignore
+      this._renderButtons(left, isLeftVisible, styleLeft)
+    );
   }
 };
 Swipeout.propTypes = {

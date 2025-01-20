@@ -1,5 +1,4 @@
 // @ts-ignore
-//@ts-nocheck
 import React, { Component } from 'react';
 import {
   PanResponder,
@@ -302,7 +301,7 @@ class Swipeout extends Component<SwipeoutProps, SwipeoutState> {
   }
 
   _tweenContent = (state: string, endValue: number) => {
-    this.setState({ [state]: endValue } as Pick<SwipeoutState, keyof SwipeoutState>);
+    this.setState({ [state]: endValue } as unknown as Pick<SwipeoutState, keyof SwipeoutState>);
   }
 
   _rubberBandEasing = (value: number, limit: number) => {
@@ -466,13 +465,17 @@ class Swipeout extends Component<SwipeoutProps, SwipeoutState> {
       },
     };
 
+   
     const styleContent = [styles.swipeoutContent];
+     //@ts-ignore
     styleContent.push(styleContentPos.content);
 
     const styleRight = [styles.swipeoutBtns];
+     //@ts-ignore
     styleRight.push(styleRightPos.right);
 
     const styleLeft = [styles.swipeoutBtns];
+     //@ts-ignore
     styleLeft.push(styleLeftPos.left);
 
     const isRightVisible = posX < 0;
@@ -488,8 +491,16 @@ class Swipeout extends Component<SwipeoutProps, SwipeoutState> {
         >
           {children}
         </View>
-        {this._renderButtons(right, isRightVisible, styleRight)}
-        {this._renderButtons(left, isLeftVisible, styleLeft)}
+        
+
+        {
+           //@ts-ignore
+        this._renderButtons(right, isRightVisible, styleRight)
+        }
+        {
+           //@ts-ignore
+        this._renderButtons(left, isLeftVisible, styleLeft)
+        }
       </View>
     );
   }
