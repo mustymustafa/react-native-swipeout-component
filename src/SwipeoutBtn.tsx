@@ -72,10 +72,13 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   swipeoutBtnText: {
-    color: '#ffffff'
+    color: '#ffffff',
+    alignSelf: 'center'
   },
   swipeoutBtnTouchable: {
-    flex: 1
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   colorDelete: {
     backgroundColor: 'red',

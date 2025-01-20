@@ -1,3 +1,5 @@
+// @ts-ignore
+//@ts-nocheck
 import React, { Component } from 'react';
 import {
   PanResponder,
@@ -32,6 +34,8 @@ interface SwipeoutProps {
   children?: React.ReactNode
   dragToCTA?: boolean
   onCTA?: () => void;
+  rowID?: number;
+  sectionID?: number;
 }
 
 interface SwipeoutState {
@@ -43,6 +47,7 @@ interface SwipeoutState {
   contentPos: number;
   contentWidth: number;
   openedRight: boolean;
+  openedLeft: boolean;
   swiping: boolean;
   tweenDuration: number;
   timeStart: number | null;
@@ -89,6 +94,7 @@ class Swipeout extends Component<SwipeoutProps, SwipeoutState> {
       contentPos: 0,
       contentWidth: 0,
       openedRight: false,
+      openedLeft: false,
       swiping: false,
       tweenDuration: 160,
       timeStart: null,
@@ -99,7 +105,7 @@ class Swipeout extends Component<SwipeoutProps, SwipeoutState> {
 
   componentDidMount() {
     this._initializePanResponder()
-    if (this.props.autoOpenRight || this.props.autoOpenLeft || this.props.autoOpenBoth) {
+    if (this.props.autoOpenRight || this.props.autoOpenLeft) {
       this._handleSwipe()
     }
 
@@ -152,7 +158,7 @@ class Swipeout extends Component<SwipeoutProps, SwipeoutState> {
         contentPos: 0,
         btnsLeftWidth: 0
       });
-    }, this.props.timeout)
+    }, this.props.timeout || 2000)
     this._autoOpenLeft()
 
   }
@@ -174,7 +180,7 @@ class Swipeout extends Component<SwipeoutProps, SwipeoutState> {
         contentPos: 0,
         btnsRightWidth: 0
       });
-    }, this.props.timeout)
+    }, this.props.timeout || 2000)
   }
 
   _autoOpenLeft = () => {
@@ -190,7 +196,7 @@ class Swipeout extends Component<SwipeoutProps, SwipeoutState> {
         contentPos: 0,
         btnsLeftWidth: 0
       });
-    }, this.props.timeout)
+    }, this.props.timeout || 2000)
 
   }
 
@@ -498,7 +504,7 @@ const styles = StyleSheet.create({
   },
   swipeoutBtns: {
     position: 'absolute',
-    top: 10,
+    top: 0,
     bottom: 0,
     flexDirection: 'row',
   },
