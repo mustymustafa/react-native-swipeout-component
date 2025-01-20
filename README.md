@@ -252,6 +252,8 @@ Here's how you can integrate `react-native-swipeout-component` with a `FlatList`
 
 2\. **Button Width Requirement**: When using `autoOpenRight` or `autoOpenLeft`, you must pass a `buttonWidth` value. This ensures that the component can correctly calculate the swipe action's dimensions and behavior.
 
+3\. **Component not displaying?:** Make sure to give it a height if you can't see the component
+
 ### Example with Custom Component Button and Background Colors
 
 ```javascript
