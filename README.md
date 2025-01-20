@@ -58,7 +58,8 @@ const MyComponent = () => {
   return (
 
     <Swipeout
-
+      //MAKE SURE TO GIVE IT A HEIGHT
+      style={{height:100}}
       right={rightButtons}
 
       autoClose={true}
