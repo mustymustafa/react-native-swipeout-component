@@ -37,7 +37,7 @@ import React from 'react';
 
 import { View, Text, StyleSheet } from 'react-native';
 
-import Swipeout from 'react-native-swipeout-component';
+import { Swipeout } from 'react-native-swipeout-component';
 
 const MyComponent = () => {
 
